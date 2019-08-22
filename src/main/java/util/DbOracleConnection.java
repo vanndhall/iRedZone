@@ -4,19 +4,19 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public final class DbConnection {
+public final class DbOracleConnection {
 
-	private static DbConnection instance;
+	private static DbOracleConnection instance;
 	private static final String DB_DRIVER = "com.mysql.jdbc.Driver";
 	private static final String DB_CONNECTION = "jdbc:mysql://localhost:3306/iredzone?serverTimezone=GMT&useSSL=false";
-	private static final String DB_USER = "smy";
-	private static final String DB_PASSWORD = "administrator1";
+	private static final String DB_USER = "c##tester";
+	private static final String DB_PASSWORD = "1234";
 
-	private DbConnection() {}
+	private DbOracleConnection() {}
 
-	public static DbConnection getInstance() {
+	public static DbOracleConnection getInstance() {
 		if (instance == null) {
-			instance = new DbConnection();
+			instance = new DbOracleConnection();
 		}
 		return instance;
 	}
